@@ -1,0 +1,210 @@
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    }
+    .container{
+      overflow-x: hidden;
+      position: relative;
+    }
+      #regForm {
+        margin: 50px 300px 0 300px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    
+    #regForm h3 {
+        color: #0f2027;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    p {
+        color: #0f2027;
+        text-align: left;
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    #regForm button {
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        color: whitesmoke;
+        background-color:#000;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    #regForm button:hover{
+        cursor: pointer;
+    }
+    
+    .text-input {
+        display: flex;
+        flex-direction: column;
+    }
+    .check-input{
+        padding: 3px;
+    }
+    
+    .check-input label{
+        padding: 10px;
+        font-size:1rem;
+    }    
+    .text-input input {
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        display: block;
+        font-size: 16px;
+        padding: 10px;
+        width: 95%;
+    }
+
+    .text-input input:focus {
+        outline: 0;
+    }
+    
+    #already{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+    #already a{
+        text-decoration: none;
+        color: rgba(243, 115, 53, 1);
+    }
+    
+    #Agreement{
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .text-input.success input{
+        border-color: #09c372;
+    }
+    
+    .text-input.error input{
+        border-color: #ff3860;
+    }
+    
+    .text-input.success textarea{
+        border-color: #09c372;
+    }
+    
+  
+    .text-input .error {
+        color: #ff3860;
+        font-size: 9px;
+        height: 13px;
+    }
+    label{
+        font-size: 1.2rem;
+    }
+    
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: white;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message h3{
+  font-size: 18px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 13px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+    
+    @media only screen and (max-width:1200px) {
+        #regForm {
+            margin: 100px 200px;
+        }
+        .c-check input{
+          width: 20px;
+        }
+    }
+    @media only screen and (max-width:1100px) {        
+        #regForm {
+            margin: 100px 100px;
+        }
+        .c-check input{
+          width: 20px;
+        }
+    }
+    @media only screen and (max-width:800px) {
+        #regForm {
+            margin:0 20px;
+        }
+      .c-check input{
+        width: 20px;
+      }
+      .c-check label{
+        width: 100%;
+        padding: 10px;
+        font-size:.8rem;
+    } 
+    label{
+      font-size: .8rem;
+  }
+    }
+
+    @media only screen and (max-width:400px){
+    #regForm {
+        margin:0 20px;
+      }
+      .c-check input{
+        width: 20px;
+      }
+      .c-check label{
+        width: 100%;
+        padding: 10px;
+        font-size:.8rem;
+    } 
+    label{
+      font-size: .8rem;
+  }
+  .new-container a{
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(243, 115, 53, 1);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+ }
+    }

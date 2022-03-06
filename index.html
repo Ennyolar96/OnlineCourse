@@ -1,0 +1,363 @@
+<?php 
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+	$user_data = check_login($con); 
+
+?>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c4f86bc0ea.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>  
+      <!-- <a href="logout.php">Logout</a>
+      <h1>This is the index page</h1>
+  
+      <br>
+      Hello, <?php echo $user_data['user_name']; ?> -->
+      <div class="container">
+      <div class="classmain">
+        <header id="myNav" class="header">
+          <ul>
+            <li><a class="logo" href="#">CoderCourse</a></li>
+            <li class="current-item"><a href="./index.html">Home</a></li>
+            <li><a href="./allcourses.html">All Courses</a></li>
+            <li><a href="./aboutcourse.html">About</a></li>
+            <li class="create textcreate";><a href="/auth/signup.html">Create Account</a></li>
+            <li class="reg textcreate"><a href="/auth/login.html">Sign in</a></li>
+            <!-- <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a></li> -->
+          </ul>
+          <a class="toggle-nav" href="#">&#9776;</a>
+        </header>
+        <div class="mainpage">
+          <div class="contentpage">
+            <h1>CoderCourse</h1>
+          </div>
+          <div class="contentpage1">
+            <h1>Physical &  Online training Institute</h1>
+            <p>Learn Full-Stack  Development from Scratch to Advanced Level</p>
+            <a href="#second">Learn More</a>
+          </div>
+        </div>
+      </div>
+        <div id="second" class="secondcontent">
+          <div class="second">
+            <img src="" alt="">
+            <h5>Description</h5>
+            <p>Welcome to the Complete Web Development Bootcamp, the only course you need to learn to code and become a full-stack web developer. With OVER 3,000 students trained in the last 2 years and a 4.8 average, our Web Development course is one of the HIGHEST RATED courses you can get online.</p>
+          </div>
+
+          <div class="second">
+            <img src="" alt="">
+            <h5>Content</h5>
+            <p>At 55+ hours, this Web Development course is without a doubt the most comprehensive web development course available online. Even if you have zero programming experience, this course will take you from beginner to mastery within a short period of time.</p>
+          </div>
+
+          <div class="second">
+            <img src="" alt="">
+            <h5>Fast Results</h5>
+            <p>We've taught thousands of students how to code and many have gone on to change their lives by becoming professional developers or having their own tech startup.</p>
+          </div>
+        </div>
+
+        <div class="thirdcontext">
+          <h4>Join us today, and look forward to become your best in your desire position (like Frontend, Backend or Full-Stack Developer)</h4>
+          <p>below are our roadmap </p>
+
+          <div class="third-context">
+          <div class="thirdcontext1">
+              <h5>For Frontend Developer</h5>
+              <ul>
+                <li>HTML 5</li>
+                <li>CSS 3</li>
+                <li>Javascript</li>
+                <li>jQuery</li>
+              </ul>
+            </div>
+
+            <div class="thirdcontext1">
+              <h5>For Backend Developer</h5>
+              <ul>
+                <li>PHP</li>
+                <!-- <li>CSS 3</li>
+                <li>Javascript</li> -->
+              </ul>
+            </div>
+
+            <div class="thirdcontext1">
+              <h5>For Full-Stack Developer</h5>
+              <div class="innercontext">
+                <div class="innercontext1">
+              <ul>
+                <li>HTML 5</li>
+                <li>CSS 3</li>
+                <li>Javascript</li>
+                <li>PHP</li>
+              </ul>
+              </div>
+              <!-- <p>Or</p> -->
+              <ul>
+                <li>WordPress</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forthcontext">
+          <h5>Some Available Opportunity to are</h5>
+          <ul>
+            <li><i class="fas fa-check"></i> Coding Challenges and coding Exercise.</li>
+            <li><i class="fas fa-check"></i> Quiz & Code Practice Test.</li>
+            <li><i class="fas fa-check"></i> Real life project.</li>
+            <li><i class="fas fa-check"></i> Downloadable programming resources and cheatsheets.</li>
+            <li><i class="fas fa-check"></i> And other Available resources will can produce.</li>
+          </ul>
+          <p>By the end if this course, you will be <b>Fluently </b> programming and ready to build your first website.</p>
+          <p>You,ll also be able to build your portfolio your brand/company website with different beautiful website you can show off to any potential employer.</p>
+        </div>
+
+        <div class="fiftycontext">
+          <h5>Benefit of learn from us</h5>
+          <ul>
+            <li>The course ypu are about to learn are updated course used across all popular and non-popular platform like Google, Facebook, Apple, Amazon and others...</li>
+            <li>This course will not cut any corners, There are several books Qualify instructor to guide you throughout the course and after.</li>
+          </ul>
+          <button>Join The Class</button>
+        </div>
+
+        <div class="seventycontext"> <!-- The section-->
+          <h2>Below are the Syllabus</h2>
+
+          <div class="seventydiv"> <!--To flex the container-->
+
+            <div class="seventydiv1 onesection"> <!--Color section-->
+              <h4>Syllabus</h4>
+            <p>The complete web development bootcamp</p>
+            </div>
+
+            <div class="seventydiv2 onesection"><!--Text section-->
+              <h5>Web Development Fundamentals</h5>
+              <ul>
+                <li>Understanding how websites work and how HTML, CSS, Javascript contribute</li>
+                <li>Understanding how the internet works</li>
+                <li>Start coding with HTML, CSS & javascript.</li>
+                <li>learn how to debug your project</li>
+              </ul>
+
+              <h5>HTML 5</h5>
+              <ul>
+                <li>Learn the anatomy of HTML syntax to structure your website.</li>
+                <li>Understand the  HTMl boilerplate and HTML doctypes.</li>
+                <li>How to structure text in HTML.</li>
+                <li>How to structure HTML lists to create unorder & order lists</li>
+                <li>How to insert image using HTML.</li>
+                <li>How to create hyperlinks using anchor tags.</li>
+                <li>Understand how to use HTML table for content.</li>
+                <li>How to use table for layout.</li>
+                <li>Learn HTML best Practices.</li>
+                <li>Understand about Html forms and create a simple contact me form.</li>
+                <li>HTML Divs & Nav and how to separate content for css styling.</li>
+              </ul>
+
+              <h5>CSS 3</h5>
+              <ul>
+                <li>Understand what are cascading style sheets and you can use it to style your website.</li>
+                <li>How to use CSS selectors and properties.</li>
+                <li>Learn about hoe to use inline, internal & external CSS.</li>
+                <li>Understand CSS coding best practices.</li>
+                <li>Learn about CSS sizing methods.</li>
+                <li>Learn about anatomy of css syntax and structure.</li>
+                <li>CSS specificity and implementing style hierarchy.</li>
+                <li>How too use & target Class & id's.</li>
+                <li>CSS display and how to implement layout.</li>
+                <li>How to use CSS position and is attribute.</li>
+                <li>How to give a font-size and web font also.</li>
+                <li>How to Centeralize element</li>
+                <li>Website design Fundamentals and typography</li>
+                <li>How to use CSS float & clear</li>
+                <li>How to conbine CSS selectors and understand selector priority</li>
+              </ul>
+            </div>
+
+            <div class="seventydiv1 twosection"> <!--Color section 2-->
+               <h4>Syllabus</h4>
+               <p>The complete web development bootcamp</p>
+            </div>
+
+            <div class="seventydiv2 twosection">
+              <h5>Javascript ES6</h5>
+              <ul>
+                <li>What is Javascript</li>
+                <li>The Fundamentals of code</li>
+                <li>Starting code with alerts and prompts</li>
+                <li>understanding variables and Data Types in Javascript</li>
+                <li>Variable naming in Javascript</li>
+                <li>Working with strings and numbers</li>
+                <li>Randomisation and logical Operators</li>
+                <li>Loops, collections and Conditionals</li>
+                <li>Functions and Invocation partners</li>
+                <li>Discussion of ECMAScript</li>
+                <li>Intermediate Javascript</li>
+                <li>Learn to use Js expressions, Operators Statements and Declarations</li>
+                <li>Object-oriented programming</li>
+                <li>Js Objects and Prototypes</li>
+                <li>The "This"z Scope and Closures</li>
+                <li>Refactoring and Debugging</li>
+              </ul>
+
+              <h5>Document OBJECT MODEL (DOM)</h5>
+            <ul>
+              <li>Learn the tree structure of HTML based website</li>
+              <li>Traverse through the document using object notation </li>
+              <li>Separation of concerns and coding best practices </li>
+              <li>Manipulate and change the HTML element using your understanding of the DOM</li>
+            </ul>
+
+            <h5>JQUERY</h5>
+            <ul>
+              <li>What is jQuery</li>
+              <li>How to use jQuery</li>
+              <li>Installing and using the jQuery framework</li>
+              <li>Learning about jQuery functionality</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="eightysection">
+          <div class="eigthysection1 sectionone">
+            <h4>Syllabus</h4>
+            <p>The complete web development bootcamp</p>
+          </div>
+
+          <div class="eigthysection2 sectionone">
+            <h5>Javascript ES6</h5>
+            <ul>
+              <li>Arrow functions</li>
+              <li>Map / Filter / Reduce</li>
+              <li>Find / FindOne / FindIndex</li>
+              <li>Import / Export and modules</li>
+              <li>Object and Array Destructuring</li>
+              <li>Spread Operator</li>
+            </ul>
+
+            <h5>Authentication and Security</h5>
+            <ul>
+              <li>Understanding the need for Authentication and keeping user details secure.</li>
+              <li>Learn about Encryption and use Encryption to keep your database secure.</li>
+              <li>Learn and Implement Hashing and salting with bcrypt.</li>
+              <li>Using Sessions and cookies to persist user log in sessions.</li>
+              <li>Setting up local Authentication from Scratch.</li>
+              <li>implementing Password to Authentication users quickly and effectively.</li>
+              <li>Understand and use environment variable to keep secret keys secure.</li>
+              <li>Understanding and use OAuth 2.0 to log in users using Google and Facebook.</li>
+            </ul>
+
+            <h5>SQL Database</h5>
+            <ul>
+              <li>Working with Database Schemas</li>
+              <li>Create-Read-Update-Destroy(CRUD)</li>
+              <li>Database Joins</li>
+              <li>Querying SQL database</li>
+            </ul>
+          </div>
+
+          <div class="eigthysection1 sectiontwo">
+            <h4>Syllabus</h4>
+            <p>The complete web development bootcamp</p>
+          </div>
+
+          <div class="eigthysection2 sectiontwo">
+            <h5>PHP</h5>
+            <ul>
+              <li></li>
+            </ul>
+
+            <h5>WordPress</h5>
+            <ul>
+              <li>What is WordPress</li>
+              <li>Installing of WordPress</li>
+              <li>Setup the virtue Theme</li>
+              <li>Installing Plugin</li>
+              <li>Setting up the plugins</li>
+              <li>Working the the plugins</li>
+              <li>Create your menus in WordPress</li>
+              <li>Customize the Navigation menu</li>
+              <li>Adding an image slider</li>
+              <li>Adding context in WordPress</li>
+              <li>Customize the Homepage Layout and the Widget Area</li>
+              <li>Creating E-Commerces website</li>
+              <li>Make responsive website with WordPress</li>
+              <li>Making different project</li>
+            </ul>
+          </div>
+        </div>
+        
+        <button class="join-us">Join Us</button>
+
+        <div class="ninetysection">
+          <h3>Over View</h3>
+          <p>Throughout this comprehensive course, we cover a massive amount of tools and technologies, including: Front-End Web Development HTML 5, CSS 3, Javascript ES6, DOM Manipulation, jQuery, Bash Command Line Git, GitHub and Version Control, Backend Web Development Node.js NPM Database SQL Authentication, Web Design Deployment with GitHub Pages,</p>
+        </div>
+
+        <div class="tentysection">
+          <div class="tentysection1">
+            <h5>WHO IS THIS COURSE FOR?</h5>
+            <ul>
+              <li>If you want to learn how to code through building fun and useful project, You need this course</li>
+              <li>If you want to be building website without code, You need this course</li>
+              <li>If you want to start your own startup by building your own websites and web apps.</li>
+              <li>If you are a seasoned programmer, then take this course</li>
+              <li>If you want to learn latest frameworks, you need the courses</li>
+              <li>If you want to learn everything about web Development, this course will benefit you.</li>
+            </ul>
+          </div>
+          <div class="tentysection2">
+            <h5>Analysis</h5>
+            <ul>
+              <li>Ready to build any website you want</li>
+              <li>Craft a portfolio of website to apply for junior developer jobs.</li>
+              <li>Ready to build fully-fledged website and web apps for your startup or business</li>
+              <li>Ready to work as a Freelance web developer</li>
+              <li>Master backend with PHP</li>
+              <li>Master frontend with Javascript</li>
+              <li>Practices with latest frameworks and technologies</li>
+              <li>Learn Professional developer with best practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="btn-part">Be Part OF Us</button>
+
+        <div class="eleven-section">
+          <h2>Join Our Community</h2>
+          <div class="eleven">
+            <p>We have a winning Community, we challenge each other to grow. learn relevant digital skills with access to young millionaire mentors to help you along the way!</p>
+            <div class="social-icon">
+              <i class="fab fa-discord"></i>
+              <i class="fa fa-telegram"></i>
+              <i class="fa fa-whatsapp"></i>
+              <i class="fa fa-slack"></i>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <p> &copy 2022 - CoderCourse <span> <i class="fa fa-envelope" aria-hidden="true"></i> <i class="fa fa-facebook"></i> <i class="fa fa-instagram"></i></span></p>
+        </footer>
+      </div>
+      <script src="./index.js"></script>
+</body>
+</html>

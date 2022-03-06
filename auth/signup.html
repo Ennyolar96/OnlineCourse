@@ -1,0 +1,170 @@
+<?php
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+	
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$user_name = $_POST['user_name'];
+		$password = $_POST['password'];
+
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		{
+
+			//save to database
+			$user_id = random_num(20);
+			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+
+			mysqli_query($con, $query);
+
+			header("Location: login.php");
+			die;
+		}else
+		{
+			echo "Please enter some valid information!";
+		}
+	}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign up</title>
+	<link rel="stylesheet" href="/css/sign.css">
+</head>
+<body>
+	<div class="container">
+		<form action="/" method="post" id="regForm">
+			<h3>Welcome to ........</h3>
+			<p id="already">Kindly fill in the follow information</p>
+			<p id="already"> Note:- Read about the program available and price attach to it <a href="#"> click here</a></p>
+
+			<div class="text-input">
+				<label for="fname">First Name</label>
+				<input type="text" name="fname" id="fname">
+				<div class="error"></div>
+			</div>
+
+			<div class="text-input">
+				<label for="lname">Last Name</label>
+				<input type="text" name="lname" id="lname">
+				<div class="error"></div>
+			</div>
+
+			<div class="text-input">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<div class="error"></div>
+			</div>
+
+			<div class="text-input">
+				<label for="pnumber">Phone Number</label>
+				<input type="text" name="Pnumber" id="Pnumber">
+				<div class="error"></div>
+			</div>
+
+			<p>What did you do Currently</p>
+
+			<div class="checkbox-input">
+				<div class="check-input">
+					<input type="radio" name="Student" id="student">
+					<label for="">Student</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Fresh Graduate" id="Fresh Graduate">
+					<label for="Fresh Graduate">Fresh Graduate</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="NYSC" id="NYSC">
+					<label for="NYSC">NYSC Member</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Working" id="Working">
+					<label for="Working">Working</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Unemployed" id="Unemployed">
+					<label for="Unemployed">Unemployed</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Other" id="Other">
+					<label for="Other">Other</label>
+				</div>
+			</div>
+
+			<p>What did want to learn</p>
+			
+			<div class="checkbox-input">
+				<div class="check-input">
+					<input type="radio" name="FrontEnd" id="FrontEnd">
+					<label for="">Frontend</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Backend" id="Backend">
+					<label for="Backend">Backend</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Full Stack" id="Full Stack">
+					<label for="fullStack">Full Stack</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Wordpress" id="Wordpress">
+					<label for="Wordpress">Wordpress</label>
+				</div>
+			</div>
+
+			<p>What is your level of expertise?</p>
+
+			<div class="checkbox-input">
+				<div class="check-input">
+					<input type="radio" name="FrontEnd" id="FrontEnd">
+					<label for="">Beginners</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Backend" id="Backend">
+					<label for="Backend">Intermediate</label>
+				</div>
+
+				<div class="check-input">
+					<input type="radio" name="Full Stack" id="Full Stack">
+					<label for="fullStack">Advance</label>
+				</div>
+			</div>
+
+			<!-- <label for="Currently">What is your level of expertise?</label>
+
+			<div class="check-input">
+				<input type="radio" name="Yes" id="Yes">
+				<label for="Yes">Yes</label>
+			</div>
+			<div class="check-input">
+				<input type="radio" name="No" id="NO">
+				<label for="fullStack">No</label>
+			</div> -->
+			<br>
+			<div class="text-input">
+				<label for="password">Password</label>
+				<input type="password" name="Pword" id="pword">
+			</div>
+
+			<button type="submit">Submit Details</button>
+		</form>
+	</div>
+</body>
+</html>
